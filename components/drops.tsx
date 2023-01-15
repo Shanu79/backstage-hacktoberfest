@@ -10,6 +10,7 @@ interface DropsProps {
 
 const Drops:FC<DropsProps> = ({ nfts }) => {
   return (
+    <div className="hidden md:block">
     <div className="drops-section bg-white h-max px-5 py-10">
       <div className="header flex flex-col items-center md:items-start">
         <h1 className="text-black text-4xl font-bold font-sans ml-5">
@@ -20,6 +21,7 @@ const Drops:FC<DropsProps> = ({ nfts }) => {
       <div className="card-container flex md:flex-row flex-col gap-5 h-96">
         {nfts.map(nft => <DropsItem nft={nft} key={nft.id}/>)}
       </div>
+    </div>
     </div>
   );
 };
@@ -32,6 +34,7 @@ interface DropItemsProps {
 
 const DropsItem:FC<DropItemsProps> = ({ nft }) => {
   return (
+    
     <div className="cont">
       <div className="card1 h-64 w-64 border-solid border-black rounded-lg border-2 mt-8 mb-5 ml-5">
         <h1 className="text-black text-2xl font-bold font-sans m-3 w-36">
